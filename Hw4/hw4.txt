@@ -1,0 +1,134 @@
+Design using a Java a bird’s eye view of a parking lot and a vehicle parking into a parking space. The parking angle should be 90° with parking space length twice the parking space width. Use a one-way aisle running left to right with a width of 133% of parking space length. All lines should be in white. The parking lot should have at least 8 spaces on each side. The vehicle width should be 80% of the parking width. It should not drive over the lines. The vehicle should enter from the left side of the aisle and park in a space past the middle of the lot.
+
+import java.awt.event.*;
+//package JavaApplication2;
+
+import java.awt.Color;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import java.awt.Graphics;
+import java.awt.Font;
+import java.awt.Polygon;
+import java.awt.Graphics2D;
+import java.awt.*;
+import javax.swing.*;
+import java.awt.geom.AffineTransform;
+        
+public class JavaApplication2 {
+
+    public static void main(String[] args) {
+        System.out.println("Hello World, ");
+        
+        JFrame frame = new JFrame("My First Frame");
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        
+        ColorJPanel colorJPanel = new ColorJPanel();
+        frame.add(colorJPanel);
+        frame.setSize(500, 600);
+        frame.setVisible(true);
+    }
+    
+}
+
+class ColorJPanel extends JPanel{
+    public void paintComponent(Graphics g){
+        super.paintComponent(g);
+        
+        Graphics2D g2d = (Graphics2D)g;
+        Rectangle rect = new Rectangle(100,100,100,100);
+        g2d.setColor(Color.RED);
+        g2d.draw(rect);
+        g2d.setColor(Color.WHITE);
+        g2d.fill(rect);
+                
+        g2d.rotate(Math.toRadians(15));
+        g2d.setColor(Color.BLUE);
+        g2d.fill(rect);
+        
+        g2d.translate(150, 100);
+        g2d.setColor(Color.GREEN);
+        g2d.fill(rect);
+        
+        
+        g2d.scale(1.5, 1.5);
+        g2d.setColor(Color.RED);
+        g2d.fill(rect);
+        
+    }
+    int i = 0;
+    public ColorJPanel() {
+        ActionListener animate = new ActionListener() {
+            public void actionPerformed(ActionEvent ae) {
+                repaint();
+            }
+        };
+        Timer timer = new Timer(50,animate);
+        timer.start();
+    }
+
+}
+
+==================================================
+
+import java.awt.event.*;
+
+import java.awt.Color;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import java.awt.Graphics;
+import java.awt.Font;
+import java.awt.Polygon;
+import java.awt.Graphics2D;
+import java.awt.*;
+import javax.swing.*;
+import java.awt.geom.AffineTransform;
+        
+public class JavaApplication2 {
+
+    public static void main(String[] args) {
+        System.out.println("Hello World, ");
+        
+        JFrame frame = new JFrame("My First Frame");
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        
+        ColorJPanel colorJPanel = new ColorJPanel();
+        frame.add(colorJPanel);
+        frame.setSize(500, 600);
+        frame.setVisible(true);
+    }
+       
+}
+
+class ColorJPanel extends JPanel{
+    int i = 0;
+
+    public void paintComponent(Graphics g){
+        super.paintComponent(g);
+       
+        Graphics2D g2d = (Graphics2D)g;
+        Rectangle rect = new Rectangle(100,100,100,100);
+
+        g2d.translate(250, 200);
+        //g2d.setColor(Color.GREEN);
+        //g2d.fill(rect);
+        i+=1; 
+        if (i>360) i = 0;
+        g2d.rotate(Math.toRadians(i));
+        g2d.setColor(Color.BLUE);
+        g2d.fill(rect);
+
+        
+    }
+    public ColorJPanel() {
+        ActionListener animate = new ActionListener() {
+            public void actionPerformed(ActionEvent ae) {
+                repaint();
+            }
+        };
+        Timer timer = new Timer(5,animate);
+        timer.start();
+    }
+
+
+
+}

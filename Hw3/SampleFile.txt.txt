@@ -1,0 +1,40 @@
+*****  HSPICE  X-2005.09       (20050729) 17:53:37  11/29/2005  solaris
+ Input File: 6_130.sp
+ lic:
+ lic: FLEXlm: v8.4b
+ lic: USER:   ee5121.29            HOSTNAME: SunFire210
+ lic: HOSTID: 83c69885             PID:      22989
+ lic: Using FLEXlm license file:
+ lic: 27000@192.168.128.210
+ lic: Checkout hspice;  Encryption code: 7D2312E76BE06D3834EE
+ lic: License/Maintenance for hspice will expire on 27-feb-2006/2005.09
+ lic: 1(in_use)/50 FLOATING license(s) on SERVER 192.168.128.210
+ lic:
+ Init: hspice initialization file: /opt/synopsys/X-2005.09/hspice/hspice.ini
+ init: begin read circuit files,  cpu clock=  3.33E-02
+       option post
+ init: end read circuit files,  cpu clock=  4.18E-02 memory=    158 kb
+ init: begin check errors,  cpu clock=  4.18E-02
+ init: end check errors,  cpu clock=  4.72E-02 memory=    158 kb
+ init: begin setup matrix, pivot=    10 cpu clock=  4.72E-02
+       establish matrix -- done,  cpu clock=  4.77E-02 memory=    163 kb
+       re-order matrix -- done,  cpu clock=  4.78E-02 memory=    164 kb
+ init: end setup matrix,  cpu clock=  4.82E-02 memory=    181 kb
+ dcop: begin dcop,  cpu clock=  4.89E-02
+ dcop: end dcop,  cpu clock=  5.40E-02 memory=    182 kb  tot_iter=      15
+ output: ./6_130.tr0
+ sweep: tran tran0    begin, stop_t=  4.00E-08 #sweeps= 401 cpu clock=  5.52E-02
+ tran: time= 4.05000E-09 tot_iter=      20   conv_iter=      10
+ tran: time= 8.30000E-09 tot_iter=     120   conv_iter=      45
+ tran: time= 1.20625E-08 tot_iter=     227   conv_iter=      85
+ tran: time= 1.61469E-08 tot_iter=     337   conv_iter=     121
+ tran: time= 2.00000E-08 tot_iter=     402   conv_iter=     145
+ tran: time= 2.44250E-08 tot_iter=     513   conv_iter=     184
+ tran: time= 2.82875E-08 tot_iter=     619   conv_iter=     220
+ tran: time= 3.20625E-08 tot_iter=     731   conv_iter=     260
+ tran: time= 3.61187E-08 tot_iter=     823   conv_iter=     290
+ tran: time= 4.00000E-08 tot_iter=     887   conv_iter=     313
+ sweep: tran tran0    end,  cpu clock=  2.16E-01 memory=    183 kb
+>info:         ***** hspice job concluded
+ Init: hspice initialization file: /opt/synopsys/X-2005.09/hspice/hspice.ini
+ lic: Release hspice token(s)

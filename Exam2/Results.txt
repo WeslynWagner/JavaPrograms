@@ -1,0 +1,10 @@
+Valid entries were:
+	5
+	4
+	3
+
+Summary is:
+	Positive:4
+	Neutral:2
+	Negative:0
+	No of submissions:3

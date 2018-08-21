@@ -1,0 +1,12 @@
+bacon
+ham
+italian sausage
+chicken
+jalapenos
+pineapple
+onions
+olives
+bell peppers
+mushrooms
+tomatoes
+spinach
